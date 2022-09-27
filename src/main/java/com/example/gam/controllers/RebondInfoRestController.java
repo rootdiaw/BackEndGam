@@ -26,6 +26,7 @@ public class RebondInfoRestController {
     public RebondInfo updateRebondInfo(@PathVariable("id") Long id, @RequestBody RebondInfo rebondInfo){
         RebondInfo reb=rebondInfoService.getRebondInfoById(id);
         reb.setLibelle(rebondInfo.getLibelle());
+        reb.setEn_libelle(rebondInfo.getEn_libelle());
 
         return  rebondInfoService.updateRebondInfo(rebondInfo);
     }

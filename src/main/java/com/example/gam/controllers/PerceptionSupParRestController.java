@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/apiperceptionsuppar")
 public class PerceptionSupParRestController {
@@ -28,6 +28,7 @@ public class PerceptionSupParRestController {
     public PerceptionSupportParution updatePerceptionSupportParution(@PathVariable("id") Long id, @RequestBody PerceptionSupportParution perceptionSupportParution){
         PerceptionSupportParution per=perceptionSupParService.getPerceptionSupportParutionById(id);
         per.setLibelle(perceptionSupportParution.getLibelle());
+        per.setEn_libelle(perceptionSupportParution.getEn_libelle());
 
         return  perceptionSupParService.updatePerceptionSupportParution(perceptionSupportParution);
     }

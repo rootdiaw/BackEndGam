@@ -30,11 +30,13 @@ public class NatureInfoRestController {
     public NatureInfo updateNatureInfo(@PathVariable("id") Long id, @RequestBody NatureInfo natureInfo){
         NatureInfo reb=natureInfoService.getNatureInfoById(id);
         reb.setLibelle(natureInfo.getLibelle());
+        reb.setEn_libelle(natureInfo.getEn_libelle());
 
         return  natureInfoService.updateNatureInfo(natureInfo);
     }
-
-    @GetMapping("/libelle/{libelle}")
+    //RequestMapping(method = RequestMethod.GET, value = Routes.BLAH_GET + "/{blahName:.+}")
+    //@GetMapping("/libelle/{libelle}")
+    @RequestMapping(method = RequestMethod.GET, value="/libelle/{libelle:.+}")
     public  NatureInfo getNatureInfoByLibelle(@PathVariable("libelle") String libelle){
         return natureInfoService.getNatureInfoByLibelle(libelle);
     }

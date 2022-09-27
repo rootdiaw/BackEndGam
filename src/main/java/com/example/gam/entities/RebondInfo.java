@@ -22,4 +22,5 @@ public class RebondInfo  implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idrebondinfo;
     private String libelle;
+    private  String en_libelle;
 }

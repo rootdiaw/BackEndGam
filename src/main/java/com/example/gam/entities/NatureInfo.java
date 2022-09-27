@@ -23,4 +23,5 @@ public class NatureInfo implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idnatureinfo;
     private  String libelle;
+    private  String en_libelle;
 }

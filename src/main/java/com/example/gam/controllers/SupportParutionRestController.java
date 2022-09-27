@@ -26,6 +26,7 @@ public class SupportParutionRestController {
     public SupportParution updateSupportParution(@PathVariable("id") Long id, @RequestBody SupportParution supportParution){
         SupportParution sup=supportParutionService.getSupportParutionById(id);
         sup.setLibelle(supportParution.getLibelle());
+        sup.setEn_libelle(supportParution.getEn_libelle());
 
         return  supportParutionService.updateSupportParution(supportParution);
     }

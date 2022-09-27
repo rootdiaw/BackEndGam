@@ -32,16 +32,6 @@ public class AllOptionServiceImpl implements AllOptionService {
         map.put("rebondInfo",rebondInfoRepository.findAll());
         map.put("supportParution",supportParutionRepository.findAll());
         map.put("perceptionSupportParution",perceptionSupParRepositry.findAll());
-
-
-       /* ArrayList<Object> arrayOfDifferentObject = new ArrayList<Object>();
-
-        arrayOfDifferentObject.addAll(natureInfoRepository.findAll());
-        arrayOfDifferentObject.addAll(rebondInfoRepository.findAll());
-        arrayOfDifferentObject.addAll(supportParutionRepository.findAll());
-        arrayOfDifferentObject.addAll(perceptionSupParRepositry.findAll());
-        return  arrayOfDifferentObject;*/
-
        return map;
 
     }

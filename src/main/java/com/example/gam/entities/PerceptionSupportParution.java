@@ -22,4 +22,5 @@ public class PerceptionSupportParution implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idperceptionsupportparution;
     private String libelle;
+    private  String en_libelle;
 }

@@ -24,4 +24,5 @@ public class SupportParution implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idsupportparution;
     private  String libelle;
+    private  String en_libelle;
 }
